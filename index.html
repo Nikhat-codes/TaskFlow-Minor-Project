@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow | Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>TaskFlow</h1>
+        <p>Organize your day. Achieve your goals.</p>
+    </header>
+
+    <main>
+        <h2>My Dashboard</h2>
+
+        <section class="dashboard">
+
+            <div class="card">
+                <h3>Total Tasks</h3>
+                <p id="totalTasks">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Pending Tasks</h3>
+                <p id="pendingTasks">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Completed Tasks</h3>
+                <p id="completedTasks">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Overdue Tasks</h3>
+                <p id="overdueTasks">0</p>
+            </div>
+
+        </section>
+
+        <section class="task-form">
+            <h2>Add New Task</h2>
+
+            <form id="taskForm">
+
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Enter task title"
+                    required
+                >
+
+                <textarea
+                    id="description"
+                    placeholder="Enter task description"
+                    required
+                ></textarea>
+
+                <label for="priority">Select Priority</label>
+
+                <select id="priority">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+
+                <label for="dueDate">Due Date</label>
+                <input type="date" id="dueDate" required>
+
+                <button type="submit">Add Task</button>
+
+            </form>
+        </section>
+
+        <section class="task-section">
+            <h2>My Tasks</h2>
+
+            <input
+                type="search"
+                id="searchTask"
+                placeholder="Search tasks..."
+            >
+
+            <div class="filters">
+
+                <select id="statusFilter">
+                    <option value="All">All Tasks</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Completed">Completed</option>
+                </select>
+
+                <select id="priorityFilter">
+                    <option value="All">All Priorities</option>
+                    <option value="High">High Priority</option>
+                    <option value="Medium">Medium Priority</option>
+                    <option value="Low">Low Priority</option>
+                </select>
+
+                <select id="sortTasks">
+                    <option value="newest">Newest First</option>
+                    <option value="dueDate">Due Date</option>
+                    <option value="priority">Priority</option>
+                </select>
+
+            </div>
+
+            <div id="taskList"></div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
